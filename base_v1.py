@@ -1,4 +1,5 @@
-# Functions go here...
+# The yes/no function. If user responds with "yes" the program continues. If they say "no", the program will
+# display the instructions.
 def yes_no(question):
     valid = False
     while not valid:
@@ -12,9 +13,17 @@ def yes_no(question):
         else:
             print("Please answer with either yes or no.")
 
-# Main routine goes here...
-show_instructions = yes_no("Have you played the "
-                           "game before?" )
-print("You choose {}.".format(show_instructions))
-print()
+# The instructions function. This is the function that explains what the instructions are and when to show them.
+def instructions():
+    print("***** How to Play *****")
+    print("The rules of the game go here.")
+    return instructions
 
+# Main program!
+played_before = yes_no("Have you played the "
+                           "game before? ")
+
+if played_before == "no":
+    instructions()
+else:
+    print("Program continues.")
