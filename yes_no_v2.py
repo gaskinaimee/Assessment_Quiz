@@ -1,19 +1,28 @@
+# The yes/no function. If user responds with "yes" the program continues. If they say "no", the program will
+# display the instructions.
+def yes_no(question):
+    valid = False
+    while not valid:
+        response = input(question).lower()
+        if response == "yes" or response == "y":
+            response = "yes"
+            return response
+        elif response == "no" or response =="n":
+            response = "no"
+            return response
+        else:
+            print("Please answer with either yes or no.")
 
-# Ask the user if they have played before.
-show_instructions = input("Have you played this game before?").lower()
-while show_instructions.lower() != "xxx":
+# The instructions function. This is the function that explains what the instructions are and when to show them.
+def instructions():
+    print("***** How to Play *****")
+    print("The rules of the game go here")
+    return instructions
 
-    # If they say "yes", output "program continues".
-    # If they say no, output 'display instructions'.
-    # If the answer is invalid, print an error.
+played_before = yes_no("Have you played the "
+                           "game before? ")
 
-    if show_instructions == "yes" or show_instructions == "y":
-        show_instructions = "yes"
-        print("Program continues.")
-
-    elif show_instructions == "no" or "n":
-        show_instructions == "no"
-        print("Display instructions.")
-
-    else:
-        print("Please answer with either yes or no.")
+if played_before == "no":
+    instructions()
+else:
+    print("Program continues.")
