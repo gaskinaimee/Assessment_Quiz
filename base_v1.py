@@ -17,3 +17,4 @@ show_instructions = yes_no("Have you played the "
                            "game before?" )
 print("You choose {}.".format(show_instructions))
 print()
+
