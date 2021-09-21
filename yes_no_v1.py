@@ -2,7 +2,7 @@
 show_instructions = input("Have you played this game before?").lower()
 while show_instructions.lower() != "xxx":
 
-# If the user responds with yes,
+# If the user responds with yes, the program should continue.
     if show_instructions == "yes" or show_instructions == "y":
         show_instructions = "yes"
         print("Program continues.")
