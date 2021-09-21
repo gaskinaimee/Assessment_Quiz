@@ -16,13 +16,12 @@ def yes_no(question):
 # The instructions function. This is the function that explains what the instructions are and when to show them.
 def instructions():
     print("***** How to Play *****")
-    print("The rules of the game go here")
+    print("")
     return instructions
 
-played_before = yes_no("Have you played the "
-                           "game before? ")
+played_before = yes_no("Have you played the game before? ")
 
 if played_before == "no":
     instructions()
 else:
-    print("Program continues.")
+    print("Continue program.")
