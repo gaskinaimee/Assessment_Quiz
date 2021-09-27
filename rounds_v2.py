@@ -12,15 +12,3 @@ elif rounds == 20:
 else:
     ("Please enter either 5, 10, 15, or 20 rounds.")
 
-play_again = input("Press <Enter> to play...").lower()
-
-
-while play_again == "":
-
-    # Increase number of rounds played.
-    rounds_played += 1
-
-
-    # Print round number
-    print("*** Round #{} ***".format(rounds_played))
-
