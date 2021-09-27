@@ -9,7 +9,7 @@ elif rounds == 15:
 elif rounds == 20:
     print("You have chosen to play 20 rounds!")
 else:
-    ("Please enter either 5, 10, 15, or 20 rounds.")
+    print("Please enter either 5, 10, 15, or 20 rounds.")
 
 play_again = input("Press <Enter> to play...").lower()
 
