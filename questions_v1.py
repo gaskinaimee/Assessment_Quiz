@@ -21,6 +21,3 @@ questions = ["What language is spoken in Brazil?",
 answers = ["Portuguese", 206, "France", "The Triassic Period", "Saturn", "Norway", "World Wide Web", 1604, 3,
            "William Shakespeare", "A caravan", "Miss Trunchbull", "Rice", "The bible", "Levi Strauss", "Pain",
            "Minotaur", "Argon", "Cancer", 13]
-
-print(questions[8])
-print(answers[8])
