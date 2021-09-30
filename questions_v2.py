@@ -25,6 +25,13 @@ answers = ["Portuguese", 206, "France", "The Triassic Period", "Saturn", "Norway
            "William Shakespeare", "A caravan", "Miss Trunchbull", "Rice", "The bible", "Levi Strauss", "Pain",
            "Minotaur", "Argon", "Cancer", 13]
 
+score = 0
 random.shuffle(questions)
-print(questions[0])
+for question, answer_list in zip(questions, answers):
+  guess = input(question).strip().lower()
 
+if guess in answer_list:
+    print("Correct!")
+    score += 1
+else:
+    print("Wrong! The correct answer was {}!".format(answer_list[0]))
