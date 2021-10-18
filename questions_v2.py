@@ -1,4 +1,5 @@
 import random
+score = 0
 
 questions = ["What language is spoken in Brazil?",
              "How many bones are there in the average adult human body?",
@@ -21,17 +22,21 @@ questions = ["What language is spoken in Brazil?",
              "What is the fourth sign of the Zodiac?",
              "How many stripes are there on the US flag?"]
 
-answers = ["Portuguese", 206, "France", "The Triassic Period", "Saturn", "Norway", "World Wide Web", 1604, 3,
-           "William Shakespeare", "A caravan", "Miss Trunchbull", "Rice", "The bible", "Levi Strauss", "Pain",
-           "Minotaur", "Argon", "Cancer", 13]
+answers = [["Portugese", "Port"], ["206", "two hundred and six"], ["France"], ["traissic", "triassic period",
+            "the triassic period"], ["saturn", "sat"], ["norway"], ["the world wide web", "world wide web"],
+            ["1604", "sixteen hundreds"], ["3", "three"], ["william shakespeare", "shakespeare"], ["a caravan", "caravan"],
+           ["Miss Trunchbull"], ["rice"], ["the bible", "bible"], ["Levi Struass", "Struass"], ["pain"], ["Minotaur"],
+           ["Argon", "ar"], ["Cancer"], ["thirteen", "13"]]
 
-score = 0
+
 random.shuffle(questions)
 for question, answer_list in zip(questions, answers):
-  guess = input(question).strip().lower()
+    guess = input(question).strip().lower()
 
-if guess in answer_list:
-    print("Correct!")
-    score += 1
-else:
-    print("Wrong! The correct answer was {}!".format(answer_list[0]))
+  #Check if the user's answer is in the corresponding row
+    if guess in answer_list:
+        print("Correct!")
+        score += 1
+    else:
+        print("Wrong! The correct answer was {}!".format(answer_list[0]))
+
