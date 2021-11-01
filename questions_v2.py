@@ -1,10 +1,16 @@
 import random
-score = 0
+questions = 0
+questions = True
 
-questions = ["What language is spoken in Brazil?",
-             "How many bones are there in the average adult human body?",
-             "Which country is brie cheese originally from?",
-             "Which came first, the Jurassic or Triassic Period?",
+def questions():
+    while questions == True:
+        questions += 1
+
+
+questions = ["What language is spoken in Brazil?"[0],
+             "How many bones are there in the average adult human body?"[1],
+             "Which country is brie cheese originally from?"[2],
+             "Which came first, the Jurassic or Triassic Period?"[3],
              "Which planet has the most moons?",
              "Which country awards the Nobel Peace Prize?",
              "What does “www” stand for in a website browser?",
@@ -22,11 +28,14 @@ questions = ["What language is spoken in Brazil?",
              "What is the fourth sign of the Zodiac?",
              "How many stripes are there on the US flag?"]
 
-answers = [["Portugese", "Port"], ["206", "two hundred and six"], ["France"], ["traissic", "triassic period",
-            "the triassic period"], ["saturn", "sat"], ["norway"], ["the world wide web", "world wide web"],
+answers = [["Portugese", "Port"[0]], ["206", "two hundred and six"[1]], ["France"[2]], ["traissic", "triassic period",
+            "the triassic period"[3]], ["saturn", "sat"], ["norway"], ["the world wide web", "world wide web"],
             ["1604", "sixteen hundreds"], ["3", "three"], ["william shakespeare", "shakespeare"], ["a caravan", "caravan"],
            ["Miss Trunchbull"], ["rice"], ["the bible", "bible"], ["Levi Struass", "Struass"], ["pain"], ["Minotaur"],
            ["Argon", "ar"], ["Cancer"], ["thirteen", "13"]]
+
+
+
 
 
 random.shuffle(questions)
