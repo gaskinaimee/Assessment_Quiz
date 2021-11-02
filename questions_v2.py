@@ -1,11 +1,4 @@
 import random
-questions = 0
-questions = True
-
-def questions():
-    while questions == True:
-        questions += 1
-
 
 questions = ["What language is spoken in Brazil?"[0],
              "How many bones are there in the average adult human body?"[1],
