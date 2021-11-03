@@ -4,34 +4,6 @@ rounds_played = 0
 rounds = int(input("How many rounds would you like to play?"))
 rounds_played = True
 
-
-def questions():
-    questions = True
-    if rounds == 5:
-            i = 0
-            while i < 5:
-                print(questions)
-                i += 1
-                rounds_played = False
-    elif rounds == 10:
-            i = 0
-            while i < 10:
-                print(questions)
-                i += 1
-                rounds_played = False
-    elif rounds == 15:
-            i = 0
-            while i < 15:
-                print(questions)
-                i += 1
-                rounds_played = False
-    else:
-            i = 0
-            while i < 20:
-                print(questions)
-                i += 1
-                rounds_played = False
-
 random.shuffle(questions)
 for question, answer_list in zip(questions, answers):
     guess = input(question).strip().lower()
@@ -65,10 +37,10 @@ questions = ["What language is spoken in Brazil?",
              "What is the fourth sign of the Zodiac?",
              "How many stripes are there on the US flag?"]
 
-answers = [["Portugese", "Port"], ["206", "two hundred and six"], ["France"], ["traissic", "triassic period",
-            "the triassic period"], ["saturn", "sat"], ["norway"], ["the world wide web", "world wide web"],
-            ["1604", "sixteen hundreds"], ["3", "three"], ["william shakespeare", "shakespeare"], ["a caravan", "caravan"],
-           ["Miss Trunchbull"], ["rice"], ["the bible", "bible"], ["Levi Struass", "Struass"], ["pain"], ["Minotaur"],
+answers = [["Portugese"], ["206", "two hundred and six"], ["France"], ["traissic", "triassic period",
+            "the triassic period"], ["saturn"], ["norway"], ["the world wide web", "world wide web"],
+            ["1604"], ["3", "three"], ["william shakespeare", "shakespeare"], ["caravan"],
+           ["Miss Trunchbull"], ["rice"], ["the bible"], ["Levi Struass"], ["pain"], ["Minotaur"],
            ["Argon", "ar"], ["Cancer"], ["thirteen", "13"]]
 
-#Once the player has played a ceratin amount of rounds,
+#Once the player has played a certain amount of rounds,
