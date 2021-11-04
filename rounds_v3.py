@@ -1,53 +1,46 @@
-import random
-score = 0
-rounds = int(input("How many rounds would you like to play?"))
 
-question_list = ["What language is spoken in Brazil?",
-             "How many bones are there in the average adult human body?",
-             "Which country is brie cheese originally from?",
-             "Which came first, the Jurassic or Triassic Period?",
-             "Which planet has the most moons?",
-             "Which country awards the Nobel Peace Prize?",
-             "What does “www” stand for in a website browser?",
-             "When was the first dictionary published?",
-             "How many hearts does an octopus have?",
-             "Who invented the word 'vomit'?",
-             "What is the collective name for a group of camels?",
-             "What is the name of the headteacher in Roald Dahl's Matilda?",
-             "What is Japanese sake made from?",
-             "What's the best selling book of all time?",
-             "Who invented jeans?",
-             "What do algophobics fear?",
-             "Which creature in Greek mythology was half-man and half-bull?",
-             "What chemical element has the atomic number 18?",
-             "What is the fourth sign of the Zodiac?",
-             "How many stripes are there on the US flag?"]
+question_list = ["What language is spoken in Brazil? \na.)Portuguese \nb.) Bengali \nc.) Spanish"
+                 "How many bones are there in the average adult human body? \na.) 155 \nb.) 206 \nc.) 215"
+                 "Which country is brie cheese originally from? \na.) France \nb.) Denmark \nc.) Italy"
+                 "Which came first, the Jurassic or Triassic Period? \na.) Jurassic Period \nb.) Triassic Period"
+                 "Which planet has the most moons? \na.) Saturn \nb.) Jupiter \nc.) Venus"
+                 "Which country awards the Nobel Peace Prize? \na.) Scotland \nb.) England \nc.) Norway"
+                 "What does “www” stand for? \na.) wide world web \nb.) web world wide \nc.) world wide web"
+                 "When was the first dictionary published? \na.) 1776 \nb.) 1806 \nc.) 1604"
+                "How many hearts does an octopus have? \na.) 3 \nb.) 4 \nc.) 5"
+                "Who invented the word 'vomit'? \na.) William Shakespeare \nb.) Charles Dickens \nc.) Henry James"
+                "What is the collective name for a group of camels? \na.) an armoury \nb.) a camp \nc.) a caravan"
+                "What is the name of the headteacher in Roald Dahl's Matilda? \na.) Miss Honey \nb.) Miss Trunchbull"
+                "What is Japanese sake made from? \na.) Grapes \nb.) Rice \nc.) Grains"
+                "What's the best selling book of all time? \na.) The Bible \nb.) Harry Potter and the Half Blood Prince \nc.) The Lord of the Rings"
+                "Who invented jeans? \na.) Madewell \nb.) Just Jeans \nc.) Levi Strauss"
+                "What do algophobics fear? \na.) Being alone \nb.) Eyes \nc.) Pain"
+                "Which creature in Greek mythology was half-man and half-bull? \na.) Sirens \nb.) Minotaur \nc.) Minotaur"
+                "What chemical element has the atomic number 18? \na.) Magnesium \nb.) Helium \nc.) Argon"
+                "What is the fourth sign of the Zodiac? \na.) Cancer \nb.) Taurus \nc.) Aries"
+                "How many stripes are there on the US flag? \na.) 12 \nb.) 13 \nc.) 14"]
 
-answer_list = [["portugese"], ["206", "two hundred and six"], ["france"], ["traissic", "triassic period",
-            "the triassic period"], ["saturn"], ["norway"], ["the world wide web", "world wide web"],
-            ["1604"], ["3", "three"], ["william shakespeare", "shakespeare"], ["caravan"],
-           ["miss trunchbull"], ["rice"], ["the bible"], ["levi struass"], ["pain"], ["minotaur"],
-           ["argon", "ar"], ["cancer"], ["thirteen", "13"]]
+answer_list = [(question_list[0]), "a"
+                (question_list[1]), "b"
+                (question_list[2]), "a"
+                (question_list[3]), "b"
+                (question_list[4]), "a"
+                (question_list[5]), "c"
+                (question_list[6]), "c"
+                (question_list[7]), "c"
+                (question_list[8]), "a"
+                (question_list[9]), "a"
+                (question_list[10]), "a"
+                (question_list[11]), "a"
+                (question_list[12]), "c"
+                (question_list[13]), "b"
+                (question_list[14]), "b"
+                (question_list[15]), "a"
+                (question_list[16]), "c"
+                (question_list[17]), "c"
+                (question_list[18]), "c"
+                (question_list[19]), "c"
+                (question_list[20]), "a"
+                (question_list[21]), "b"]
 
-if rounds == 5:
-    print("You have chosen to play 5 rounds!")
-    rounds += 1
-elif rounds == 10:
-    print("You have chosen to play 10 rounds!")
-elif rounds == 15:
-    print("You have chosen to play 15 rounds!")
-elif rounds == 20:
-    print("You have chosen to play 20 rounds!")
-else:
-    print("Please enter either 5, 10, 15, or 20 rounds.")
-
-
-  #Check if the user's answer is in the corresponding row
-for question in question_list:
-    print(question[0])
-    answer = answer_list[0]
-    if answer == answer_list[0]:
-        print("Correct!")
-        score += 1
-    else:
-        print("Incorrect!")
+print(question_list)
