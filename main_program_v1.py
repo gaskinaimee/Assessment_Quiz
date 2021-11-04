@@ -16,13 +16,12 @@ def yes_no(question):
 # The instructions function. This is the function that explains what the instructions are and when to show them.
 def instructions():
     print("***** How to Play *****")
-    print("First, you will choose how many rounds to play. \n"
-          "You can choose 5 rounds, 10 rounds, 15 rounds, or 20 rounds. \n"
-          "If you choose 5 rounds, you wil be asked 5 questions. \n"
-          "If you choose 10 rounds, you'll be asked 10 questions.\n"
-          "The game then begins. \n"
-          "You will get asked a question. If you answer wrong, you lose a point.\n"
-          "If you answer correctly, you gain a point. The right answer will be displayed.")
+    print("First, you'll be asked how many rounds you want to play. \n"
+          "You can choose to play 5 rounds, 10 rounds, 15 rounds or 20 rounds. \n"
+          "The game will then begin. You will be asked a question and 3 possible answers will be displayed.\n "
+          "Choose the answer you think is correct and type in the first letter of the answer. For example... \n"
+          "What is the best colour? \na.) Red \nb.) Blue \nc.) Green \n"
+          "You will have to type in either a, b or c.")
     return instructions
 
 played_before = yes_no("Have you played the game before? ")
