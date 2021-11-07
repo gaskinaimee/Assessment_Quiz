@@ -27,10 +27,6 @@ answers = [["Portugese", "Port"[0]], ["206", "two hundred and six"[1]], ["France
            ["Miss Trunchbull"], ["rice"], ["the bible", "bible"], ["Levi Struass", "Struass"], ["pain"], ["Minotaur"],
            ["Argon", "ar"], ["Cancer"], ["thirteen", "13"]]
 
-
-
-
-
 random.shuffle(questions)
 for question, answer_list in zip(questions, answers):
     guess = input(question).strip().lower()
