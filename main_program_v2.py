@@ -2,6 +2,7 @@ import random
 points = 0
 rounds = 1
 question_wrong = 0
+score = 0
 
 # The yes/no function. If user responds with "yes" the program continues. If they say "no", the program will
 # display the instructions.
@@ -28,10 +29,6 @@ def yes_no(question):
             return response
         else:
             print("Please answer with either yes or no.")
-def score():
-    for answer in question:
-        points = points + 1
-        print(points)
 
 # The instructions function. This is the function that explains what the instructions are and when to show them.
 def instructions():
@@ -58,7 +55,7 @@ def ask_question (question, answer):
         try:
             response = input(question)
             if response == answer:
-                print("You are correct! Your score is {}.".format(score))
+                statement_generator("You are correct!", "~")
                 return response
             else:
                 print("You are incorrect!")
@@ -67,6 +64,7 @@ def ask_question (question, answer):
             print(error)
 
 #Main Routine goes here...
+score = 0
 print("!!!!! ROUND {} !!!!!".format(rounds))
 question_1 = ask_question("What language is spoken in Brazil? \n(a) Portuguese \n(b) Bengali \n(c) Spanish", "a")
 rounds += 1
@@ -135,4 +133,5 @@ elif score > 10:
     print("Nice work! You got more than half right! I think next time you can get a higher score!")
 else:
     print("Woah, you did great! Awesome!")
-print("Thank you for playing the General Knowledge Quiz! Your total score is {}.".format(score))
+
+statement_generator("Thank you for playing the General Knowledge Quiz! Your total score is {}.".format(score), "*")
