@@ -1,9 +1,9 @@
 import random
-
-questions = ["What language is spoken in Brazil?"[0],
-             "How many bones are there in the average adult human body?"[1],
-             "Which country is brie cheese originally from?"[2],
-             "Which came first, the Jurassic or Triassic Period?"[3],
+print("Start")
+questions = ["What language is spoken in Brazil?",
+             "How many bones are there in the average adult human body?",
+             "Which country is brie cheese originally from?",
+             "Which came first, the Jurassic or Triassic Period?",
              "Which planet has the most moons?",
              "Which country awards the Nobel Peace Prize?",
              "What does “www” stand for in a website browser?",
