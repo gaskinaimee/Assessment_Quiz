@@ -1,7 +1,9 @@
-import random
+#These are the variables. They are the starting values, so when the program starts for the rounds it starts from 1 and
+#the score starts from 0.
 rounds = 1
 score = 0
 
+#The question_list contains all of the questions that will be asked during the quiz.
 question_list = ["What language is spoken in Brazil?",
                  "How many bones are there in the average adult human body?",
                  "Which country is brie cheese originally from?",
@@ -23,6 +25,8 @@ question_list = ["What language is spoken in Brazil?",
                  "How many stripes are there on the US flag?"
                  "What's the biggest animal in the world?"]
 
+#The answer_list contains the answers to the questions. When the question is asked, if it doesn't match the answer it
+#will be incorrect.
 answer_list = ["portuguese",
                "206",
                "france",
@@ -45,16 +49,8 @@ answer_list = ["portuguese",
                "13",
                "blue whale"]
 
-def instructions():
-    print("***** How to Play *****")
-    print("First, you'll be asked how many rounds you want to play. \n"
-          "You can choose to play 5 rounds, 10 rounds, 15 rounds or 20 rounds. \n"
-          "The game will then begin. You will be asked a question and 3 possible answers will be displayed.\n "
-          "Choose the answer you think is correct and type in the first letter of the answer. For example... \n"
-          "What is the best colour? \na.) Red \nb.) Blue \nc.) Green \n"
-          "You will have to type in either a, b or c.")
-    return instructions
-
+#This asks the user whether they have played the game before. If the user responds with "yes" or "y" 'correct' will be
+#printed.
 def yes_no(question):
     valid = False
     while not valid:
@@ -68,6 +64,19 @@ def yes_no(question):
         else:
             print("Please answer with either yes or no.")
 
+
+#This prints the instructions when the user responds with "no" to yes/no.
+def instructions():
+    print("***** How to Play *****")
+    print("A question will be printed on the screen to answer. Try your best to answer it correctly.\n"
+          "If you answer it correctly, you will gain a point.\n"
+          "If you answer it incorrectly, you will not gain or lose any points.\n"
+          "If your answer is wrong, the correct answer will be printed. At the end of the game your score will be displayed.\n"
+          "GOOD LUCK!")
+    return instructions
+
+#The statement_generator is used to make the program more aesthetically pleasing. The statement_generator function can
+#be used throughout the program.
 def statement_generator(statement, decoration):
     sides = decoration * 3
     statement = "{} {} {}".format(sides, statement, sides)
@@ -79,28 +88,36 @@ def statement_generator(statement, decoration):
 
     return ""
 
+#!!!!! ONWARDS IS THE MAIN ROUNTINE !!!!!
 
-while yes_no == "n":
-    print(instructions)
-
-
-
+#The statement_generator is used here to make the title screen look better.
 statement_generator("Welcome to the General Knowledge quiz!", "*")
 print()
-played_before = yes_no("Have you played the game before? ")
 
-# Main routine...
+#Asks whether the user has played the game before. If no, instructions are displayed.
+played_before = yes_no("Have you played the game before? ")
+if played_before == "no":
+    instructions()
+
+#These are the rounds. They use the score variable, question_list and answer_list to run.
 print("***** ROUND {} *****".format(rounds))
+#This connects question 1 to the first question in the question_list. Using input, it asks the user the answer.
 question1 = input(question_list[0]).lower()
 if question1 == "portugese":
+    #The if statement asks the user the question. If the user answers with "portugese" they gain a point.
     score += 1
     print("Correct! Your score is {}.".format(score))
 else:
+    #prints the correct answer if the users answer was wrong.
     print("Wrong! The correct answer is {}.".format(answer_list[0]))
+#The rounds increase as the rounds go on.
 rounds += 1
 
+#The next question does the exact same thing.
 print("***** ROUND {} *****".format(rounds))
+#Question 2 is connected to the second question asked in the question_list.
 question2 = input(question_list[1]).lower()
+#If the question is the correct answer, the user will be told by telling them it's correct.
 if question2 == answer_list[1]:
     score += 1
     print("Correct! Your score is {}.".format(score))
@@ -108,6 +125,7 @@ else:
     print("Wrong! The correct answer is {}.".format(answer_list[1]))
 rounds += 1
 
+#This question uses the same functions/format as question 1.
 print("***** ROUND {} *****".format(rounds))
 question3 = input(question_list[2]).lower()
 if question3 == answer_list[2]:
@@ -117,6 +135,7 @@ else:
     print("Wrong! The correct answer is {}.".format(answer_list[2]))
 rounds += 1
 
+#This question uses the same functions/format as question 1.
 print("***** ROUND {} *****".format(rounds))
 question4 = input(question_list[3]).lower()
 if question4 == answer_list[3]:
@@ -126,6 +145,7 @@ else:
     print("Wrong! The correct answer is {}.".format(answer_list[3]))
 rounds += 1
 
+#This question uses the same functions/format as question 1.
 print("***** ROUND {} *****".format(rounds))
 question5 = input(question_list[4]).lower()
 if question5 == answer_list[4]:
@@ -135,6 +155,7 @@ else:
     print("Wrong! The correct answer is {}.".format(answer_list[4]))
 rounds += 1
 
+#This question uses the same functions/format as question 1.
 print("***** ROUND {} *****".format(rounds))
 question6 = input(question_list[5]).lower()
 if question6 == answer_list[5]:
@@ -144,6 +165,7 @@ else:
     print("Wrong! The correct answer is {}.".format(answer_list[5]))
 rounds += 1
 
+#This question uses the same functions/format as question 1.
 print("***** ROUND {} *****".format(rounds))
 question7 = input(question_list[6]).lower()
 if question7 == answer_list[6]:
@@ -153,6 +175,7 @@ else:
     print("Wrong! The correct answer is {}.".format(answer_list[6]))
 rounds += 1
 
+#This question uses the same functions/format as question 1.
 print("***** ROUND {} *****".format(rounds))
 question8 = input(question_list[7]).lower()
 if question8 == answer_list[7]:
@@ -162,6 +185,7 @@ else:
     print("Wrong! The correct answer is {}.".format(answer_list[7]))
 rounds += 1
 
+#This question uses the same functions/format as question 1.
 print("***** ROUND {} *****".format(rounds))
 question9 = input(question_list[8]).lower()
 if question9 == answer_list[8]:
@@ -171,6 +195,7 @@ else:
     print("Wrong! The correct answer is {}.".format(answer_list[8]))
 rounds += 1
 
+#This question uses the same functions/format as question 1.
 print("***** ROUND {} *****".format(rounds))
 question10 = input(question_list[9]).lower()
 if question10 == answer_list[9]:
@@ -180,6 +205,7 @@ else:
     print("Wrong! The correct answer is {}.".format(answer_list[9]))
 rounds += 1
 
+#This question uses the same functions/format as question 1.
 print("***** ROUND {} *****".format(rounds))
 question11 = input(question_list[10]).lower()
 if question11 == answer_list[10]:
@@ -189,6 +215,7 @@ else:
     print("Wrong! The correct answer is {}.".format(answer_list[10]))
 rounds += 1
 
+#This question uses the same functions/format as question 1.
 print("***** ROUND {} *****".format(rounds))
 question12 = input(question_list[11]).lower()
 if question12 == answer_list[11]:
@@ -198,6 +225,7 @@ else:
     print("Wrong! The correct answer is {}.".format(answer_list[11]))
 rounds += 1
 
+#This question uses the same functions/format as question 1.
 print("***** ROUND {} *****".format(rounds))
 question13 = input(question_list[12]).lower()
 if question13 == answer_list[12]:
@@ -207,6 +235,7 @@ else:
     print("Wrong! The correct answer is {}.".format(answer_list[12]))
 rounds += 1
 
+#This question uses the same functions/format as question 1.
 print("***** ROUND {} *****".format(rounds))
 question14 = input(question_list[13]).lower()
 if question14 == answer_list[13]:
@@ -216,6 +245,7 @@ else:
     print("Wrong! The correct answer is {}.".format(answer_list[13]))
 rounds += 1
 
+#This question uses the same functions/format as question 1.
 print("***** ROUND {} *****".format(rounds))
 question15 = input(question_list[14]).lower()
 if question15 == answer_list[14]:
@@ -225,6 +255,7 @@ else:
     print("Wrong! The correct answer is {}.".format(answer_list[14]))
 rounds += 1
 
+#This question uses the same functions/format as question 1.
 print("***** ROUND {} *****".format(rounds))
 question16 = input(question_list[15]).lower()
 if question16 == answer_list[15]:
@@ -234,6 +265,7 @@ else:
     print("Wrong! The correct answer is {}.".format(answer_list[15]))
 rounds += 1
 
+#This question uses the same functions/format as question 1.
 print("***** ROUND {} *****".format(rounds))
 question17 = input(question_list[16]).lower()
 if question17 == answer_list[16]:
@@ -243,6 +275,7 @@ else:
     print("Wrong! The correct answer is {}.".format(answer_list[16]))
 rounds += 1
 
+#This question uses the same functions/format as question 1.
 print("***** ROUND {} *****".format(rounds))
 question18 = input(question_list[17]).lower()
 if question18 == answer_list[17]:
@@ -252,6 +285,7 @@ else:
     print("Wrong! The correct answer is {}.".format(answer_list[17]))
 rounds += 1
 
+#This question uses the same functions/format as question 1.
 print("***** ROUND {} *****".format(rounds))
 question19 = input(question_list[18]).lower()
 if question19 == answer_list[18]:
@@ -261,6 +295,7 @@ else:
     print("Wrong! The correct answer is {}.".format(answer_list[18]))
 rounds += 1
 
+#This question uses the same functions/format as question 1.
 print("***** ROUND {} *****".format(rounds))
 question20 = input(question_list[19]).lower()
 if question20 == answer_list[19]:
@@ -269,8 +304,10 @@ if question20 == answer_list[19]:
 else:
     print("Wrong! The correct answer is {}.".format(answer_list[19]))
 
+#Displays the total score.
 print("~~~ YOUR TOTAL SCORE IS {} ~~~".format(score))
 
+#If the question is below or above certain numbers, different statements are displayed depending on what the user got as a score.
 if score <= 5:
     print("Nice try!")
 elif score <= 10:
@@ -280,4 +317,5 @@ elif score > 10:
 else:
     print("Woah, you did great! Awesome!")
 
+#Uses statement_generator to display the end message.
 statement_generator("Thank you for playing the General Knowledge Quiz!",  "*")
